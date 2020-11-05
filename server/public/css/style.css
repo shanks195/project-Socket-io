@@ -110,6 +110,7 @@ header {
 }
 
 header {
+    position: relative;
     border-bottom: 1px solid #eceef1;
 }
 
@@ -197,8 +198,10 @@ span.coin {
 }
 
 .coin span {
+    margin-top: 1%;
     float: left;
     font-weight: 700;
+    margin-left: 2%;
 }
 
 .coin {
@@ -265,7 +268,7 @@ span.tools:hover {
 
 .user-account img {
     float: left;
-    width: 6%;
+    width: 100%;
     height: 10%;
     border-radius: 50%;
 }
@@ -273,7 +276,7 @@ span.tools:hover {
 .user-account span {
     display: inline-block;
     float: left;
-    padding: 1% 2%;
+    padding: 3% 2%;
 }
 
 .user-account:hover {
@@ -291,6 +294,7 @@ span.title-contact {
 
 .coin span.title-account {
     margin-left: 2%;
+    margin-top: 1%;
 }
 
 .content-fact {
@@ -550,4 +554,184 @@ ul.tab-header {
 
 div#nav {
     overflow: hidden;
+}
+
+.online {
+    border: 1px solid white;
+    bottom: 0%;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: greenyellow;
+    left: 73%;
+}
+
+.trangthai-user {
+    width: 33px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: 35px;
+}
+
+.user {
+    font-size: 18px;
+}
+
+.box-trangthai .right {
+    display: inline-block;
+    width: 31%;
+    margin-left: 4%;
+    float: left;
+}
+
+.box-trangthai .right span {
+    color: #d8dadf;
+    font-size: 14px;
+}
+
+.icon-chuc-nang i {
+    font-size: 20px;
+    color: blue;
+    padding-right: 5%;
+}
+
+.icon-chuc-nang.right {
+    float: right;
+    width: 28%!important;
+    margin-top: 8px;
+    margin-right: 1%;
+}
+
+.box-message {
+    border-radius: 7px;
+    padding: 1% 2%;
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid #d8dadf;
+    width: 69%;
+}
+
+.box-trangthai {
+    box-sizing: border-box;
+    display: block;
+}
+
+.box-inbox {
+    float: left;
+    display: block;
+    width: 73%;
+}
+
+.contentInbox {
+    display: inline-block;
+    width: 100%;
+    height: 286px;
+    background: red;
+}
+
+.box-box-message {
+    display: inline-block;
+    width: 100%;
+}
+
+.tinnangInbox i {
+    float: left;
+    font-size: 22px;
+    padding-right: 3%;
+    padding-top: 2%;
+    color: blue;
+}
+
+.input-tinnhan {
+    display: inline-block;
+    width: 53%;
+}
+
+.input-tinnhan form {
+    display: inline-block;
+    width: 100%;
+}
+
+.input-tinnhan input[type="text"] {
+    border: none;
+    margin-left: 8%;
+    margin-top: 5%;
+    display: inline-block;
+    width: 72%;
+    float: left;
+}
+
+.input-tinnhan form span {
+    width: 8%;
+    display: inline-block;
+    float: left;
+}
+
+.tinnangInbox {
+    padding: 0px 8px;
+    box-sizing: border-box;
+}
+
+.input-tinnhan {
+    margin-top: 2%;
+    float: left;
+    border: 1px solid #d8dadf;
+    border-radius: 19px;
+    margin-left: -1%;
+}
+
+header .box-box-message {
+    position: absolute;
+    top: 0px;
+}
+
+.tinnangInbox input[type="submit"] {
+    margin-top: 3%;
+    width: 16%;
+    height: 29px;
+    float: right;
+    border: none;
+    border-radius: 10px;
+}
+
+.trangthai-user img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.box-message-user {
+    width: 32%;
+    z-index: 2000;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+}
+
+.user-account .trangthai-user {
+    width: 8%;
+}
+
+.user-account .trangthai-user img {
+    height: 34px;
+}
+
+header {
+    height: 45vh;
+    position: fixed;
+    background: white;
+    z-index: 2000;
+}
+
+.tab-content {
+    margin-top: 96px;
+    position: fixed;
+    z-index: 2000;
+}
+
+.box-message-user {
+    display: block;
+    height: 52vh;
+    background: white;
 }

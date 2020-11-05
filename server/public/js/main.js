@@ -33,7 +33,7 @@ for (let i = 0; i < tabsPane.length; i++) {
         tabBody.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
         tabBody.getElementsByTagName("tab")[i].classList.add("activeTwo");
 
-        tabIndicator.style.left = `20px`;
+
     });
 }
 
