@@ -1,4 +1,5 @@
 var express = require("express");
+const { isPrimitive } = require("util");
 var app = express();
 app.use(express.static("./public"));
 app.set("view engine", "ejs");
@@ -13,7 +14,13 @@ io.on("connection", function(socket) {
 
     socket.on("disconnect", function() {
         console.log("Ngắt kết nối: " + socket.id);
-    })
+    });
+    socket.on("Client-send-data", function(data) {
+        console.log(socket.id + " Vừa gửi   " + data);
+        //io.sockets.emit("Server-send-data", data + "888");
+        //socket.emit("Server-send-data", data + "888");
+        socket.broadcast.emit("Server-send-data", data + "888");
+    });
 });
 app.get("/signin", function(req, res) {
     res.render("web/index");

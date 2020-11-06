@@ -735,3 +735,8 @@ header {
     height: 52vh;
     background: white;
 }
+
+.contentInbox::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 16px;
+}

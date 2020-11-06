@@ -18,24 +18,24 @@ tabs.forEach(tab => {
         })
     })
     /*----------------SOURCE CODE-------------------------------------------------------------*/
-    //--Tab menu load các chủ đề lên dữ liệu riêng---//
-let tabHeader = document.getElementsByClassName("tab-header")[0];
-let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
-let tabBody = document.getElementsByClassName("tab-body")[0];
+    //     //--Tab menu load các chủ đề lên dữ liệu riêng---//
+    // let tabHeader = document.getElementsByClassName("tab-header")[0];
+    // let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
+    // let tabBody = document.getElementsByClassName("tab-body")[0];
 
-let tabsPane = tabHeader.getElementsByTagName("li");
-
-
-for (let i = 0; i < tabsPane.length; i++) {
-    tabsPane[i].addEventListener("click", function() {
-        tabHeader.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
-        tabsPane[i].classList.add("activeTwo");
-        tabBody.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
-        tabBody.getElementsByTagName("tab")[i].classList.add("activeTwo");
+// let tabsPane = tabHeader.getElementsByTagName("li");
 
 
-    });
-}
+// for (let i = 0; i < tabsPane.length; i++) {
+//     tabsPane[i].addEventListener("click", function() {
+//         tabHeader.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
+//         tabsPane[i].classList.add("activeTwo");
+//         tabBody.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
+//         tabBody.getElementsByTagName("tab")[i].classList.add("activeTwo");
+
+
+//     });
+// }
 
 //pagination for các chủ dề source code
 //itemPerPage: 3, currentPage = 1
