@@ -350,11 +350,11 @@
                                 <span class="search-contact ">
                                     <i class="fas fa-search "></i>
                                 </span>
-                                <span class="tools ">
+                                <span class="tools">
                                     <i class="fas fa-ellipsis-h "></i>
                                 </span>
-                                <div class="user-account user-1 ">
-                                    <a href="#user1">
+                                <div class="tab-header">
+                                    <a class="activeTwo account-user">
                                         <div class="trangthai-user">
                                             <img src="imgs/118168160_177697283730290_2766504966805287219_o.jpg " alt=" ">
                                             <div class="online">
@@ -362,9 +362,7 @@
                                         </div>
                                         <span>Name user 1</span>
                                     </a>
-                                </div>
-                                <div class="user-account user-2 ">
-                                    <a>
+                                    <a class="account-user">
                                         <div class="trangthai-user">
                                             <img src="imgs/107488912_868557167002874_8201749292846955900_o.jpg" alt=" ">
                                             <div class="online">
@@ -372,10 +370,7 @@
                                         </div>
                                         <span>Name user 2</span>
                                     </a>
-
-                                </div>
-                                <div class="user-account user-3 ">
-                                    <a>
+                                    <a class="account-user">
                                         <div class="trangthai-user">
                                             <img src="imgs/117944381_205812670887124_5864011857832785218_n.jpg " alt=" ">
                                             <div class="online">
@@ -383,10 +378,7 @@
                                         </div>
                                         <span>Name user 3</span>
                                     </a>
-
-                                </div>
-                                <div class="user-account user-4 ">
-                                    <a>
+                                    <a class="account-user">
                                         <div class="trangthai-user">
                                             <img src="imgs/84656250_2797054377077886_7649723962657603584_o.jpg " alt=" ">
                                             <div class="online">
@@ -394,7 +386,6 @@
                                         </div>
                                         <span>Name user 4</span>
                                     </a>
-
                                 </div>
                             </div>
                         </div>
@@ -420,9 +411,8 @@
                 </div>
                 <!-- het trang market -->
             </div>
-
-            <div class="box-message-user" id="user1">
-                <div class="box-box-message user1">
+            <div class="tab-body box-message-user" id="close" >
+                <tab class="activeTwo box-box-message">
                     <div class="box-message">
                         <div class="box-trangthai">
                             <div class="trangthai-user left">
@@ -441,12 +431,12 @@
                             <div class="icon-chuc-nang right">
                                 <i class="fas fa-video"></i>
                                 <i class="fas fa-minus"></i>
-                                <a href="#"><i class="fas fa-times"></i></a>
+                                <a id="button_close" onclick="closeWindow()"><i class="fas fa-times"></i></a>
 
                             </div>
                         </div>
                     </div>
-                    <div class="box-inbox">
+                    <div class="box-inbox" >
                         <div class="contentInbox">
                             <h1 id="noidung"></h1>
                         </div>
@@ -463,9 +453,136 @@
                             <input type="submit" value="Sends" id="submit">
                         </div>
                     </div>
-                </div>
-            </div>
+                </tab>
+                <tab class="box-box-message">
+                    <div class="box-message">
+                        <div class="box-trangthai">
+                            <div class="trangthai-user left">
+                                <img src="imgs/118168160_177697283730290_2766504966805287219_o.jpg " alt=" ">
+                                <div class="online">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="user">
+                                    user 2
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
 
+                                <span>Đang Hoạt Động</span>
+                            </div>
+                            <div class="icon-chuc-nang right">
+                                <i class="fas fa-video"></i>
+                                <i class="fas fa-minus"></i>
+                                <a id="button_close" onclick="closeWindow()"><i class="fas fa-times"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-inbox" >
+                        <div class="contentInbox">
+                            <h1 id="noidung"></h1>
+                        </div>
+                        <div class="tinnangInbox">
+
+                            <i class="fas fa-paperclip"></i>
+                            <i class="far fa-image"></i>
+                            <i class="fas fa-gifts"></i>
+                            <div class="input-tinnhan">
+                                <form action="">
+                                    <input type="text" name="" id="" placeholder="Aa..."><span><a href="">😅</a></span>
+                                </form>
+                            </div>
+                            <input type="submit" value="Sends" id="submit">
+                        </div>
+                    </div>
+                </tab>
+                <tab class="box-box-message">
+                    <div class="box-message">
+                        <div class="box-trangthai">
+                            <div class="trangthai-user left">
+                                <img src="imgs/118168160_177697283730290_2766504966805287219_o.jpg " alt=" ">
+                                <div class="online">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="user">
+                                    user 3
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+
+                                <span>Đang Hoạt Động</span>
+                            </div>
+                            <div class="icon-chuc-nang right">
+                                <i class="fas fa-video"></i>
+                                <i class="fas fa-minus"></i>
+                                <a id="button_close"><i class="fas fa-times"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-inbox" >
+                        <div class="contentInbox">
+                            <h1 id="noidung"></h1>
+                        </div>
+                        <div class="tinnangInbox">
+
+                            <i class="fas fa-paperclip"></i>
+                            <i class="far fa-image"></i>
+                            <i class="fas fa-gifts"></i>
+                            <div class="input-tinnhan">
+                                <form action="">
+                                    <input type="text" name="" id="" placeholder="Aa..."><span><a href="">😅</a></span>
+                                </form>
+                            </div>
+                            <input type="submit" value="Sends" id="submit">
+                        </div>
+                    </div>
+                </tab>
+                <tab class="box-box-message">
+                    <div class="box-message">
+                        <div class="box-trangthai">
+                            <div class="trangthai-user left">
+                                <img src="imgs/118168160_177697283730290_2766504966805287219_o.jpg " alt=" ">
+                                <div class="online">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="user">
+                                    user 4
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+
+                                <span>Đang Hoạt Động</span>
+                            </div>
+                            <div class="icon-chuc-nang right">
+                                <i class="fas fa-video"></i>
+                                <i class="fas fa-minus"></i>
+                                <a id="button_close" onclick="closeWindow()" onclick="closeWindow()"><i class="fas fa-times"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-inbox" >
+                        <div class="contentInbox">
+                            <h1 id="noidung"></h1>
+                        </div>
+                        <div class="tinnangInbox">
+
+                            <i class="fas fa-paperclip"></i>
+                            <i class="far fa-image"></i>
+                            <i class="fas fa-gifts"></i>
+                            <div class="input-tinnhan">
+                                <form action="">
+                                    <input type="text" name="" id="" placeholder="Aa..."><span><a href="">😅</a></span>
+                                </form>
+                            </div>
+                            <input type="submit" value="Sends" id="submit">
+                        </div>
+                    </div>
+                </tab>
+            </div>
+           
+            
 
 
         </div>

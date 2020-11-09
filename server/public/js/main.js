@@ -45,3 +45,38 @@ tabs.forEach(tab => {
 //1: CurrentPage = 1, start = (1-1) * 3 = 0,end =1*3=3,start=0,end=3
 //2: CurrentPage = 2, start = (2-1) * 3 = 3,end =2*3=6,start=3,end=6
 //3: CurrentPage = 3, start = (3-1) * 3 = 6,end =3*3=9,start=6,end=9
+
+
+
+/*----- Application message----------------------------*/
+
+
+   let tabHeader = document.getElementsByClassName("tab-header")[0];
+    let tabBody = document.getElementsByClassName("tab-body")[0];
+    
+let tabsPane = tabHeader.getElementsByTagName("a");
+function closeWindow(){
+    tabBody.style.display="none";
+}
+
+for (let i = 0; i < tabsPane.length; i++) {
+    tabsPane[i].addEventListener("click", function() {
+        tabHeader.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
+        tabsPane[i].classList.add("activeTwo");
+        tabBody.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
+        tabBody.getElementsByTagName("tab")[i].classList.add("activeTwo");
+       
+
+    });
+}
+
+  
+
+
+
+
+
+
+// +
+
+/*-------------------End Application message------------------*/

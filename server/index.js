@@ -22,12 +22,20 @@ io.on("connection", function(socket) {
         socket.broadcast.emit("Server-send-data", data + "888");
     });
 });
+//game
+app.get("/application/game_pokedex", function(req, res) {
+    res.render("web/application/pokedex/index");
+});
+// tab
+app.get("/message", function(req, res) {
+    res.render("web/application/message/index");
+});
 app.get("/signin", function(req, res) {
-    res.render("web/index");
-})
+    res.render("web/signin");
+});
 app.get("/login", function(req, res) {
-    res.render("web/index");
-})
+    res.render("web/login");
+});
 app.get("/", function(req, res) {
     res.render("web/index");
-})
+});
