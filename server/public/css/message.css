@@ -1,0 +1,417 @@
+.body_message {
+    height: 82vh;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 1%;
+}
+
+.message_header {
+    width: 30%;
+    float: left;
+    display: inline-block;
+}
+
+.body_message_content {
+    height: 82vh;
+    background: white;
+    display: inline-block;
+    float: left;
+    width: 70%;
+}
+
+.tile_header {
+    width: 100%;
+    overflow: hidden;
+}
+
+.chat_title {
+    display: inline-block;
+    float: left;
+    width: 30%;
+}
+
+.icon-test {
+    display: inline-block;
+    float: left;
+    width: 70%;
+    margin-top: 3%;
+}
+
+.icon-test a {
+    cursor: pointer;
+    padding-top: 2%;
+    float: right;
+    margin-right: 6%;
+    width: 30px;
+    height: 30px;
+    background: #f5f5f5;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.search_message {
+    padding: 1%;
+    border-radius: 14px;
+    display: inline-block;
+    width: 100%;
+    background: #f5f5f5;
+    box-sizing: border-box;
+}
+
+i.fas.fa-search {
+    font-size: 20px;
+    margin-top: 2%;
+    display: inline-block;
+    float: left;
+}
+
+.search_message input[type="text"] {
+    padding: 2% 2%;
+    border: none;
+    background: #f5f5f5;
+}
+
+.iconUser {
+    display: inline-block;
+    float: left;
+    width: 12%;
+}
+
+ul.body_message__header {
+    padding: 0%;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    list-style: none;
+    margin: 1% 0%;
+}
+
+ul.body_message_header li {
+    display: block;
+    overflow: hidden;
+}
+
+.iconUser img {
+    width: 100%;
+    height: 59px;
+    border-radius: 50%;
+}
+
+ul.body_message_header li p {
+    width: 60%;
+    display: inline-block;
+    margin: 0%;
+}
+
+ul.body_message_header li p {
+    display: inline-block;
+    float: left;
+    width: 20%;
+}
+
+ul.body_message__header li p {
+    padding-left: 2%;
+    display: inline-block;
+    width: 56%;
+}
+
+ul.body_message__header li {
+    padding: 1%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.body_message_content tab {
+    display: none;
+    width: 100%;
+    background: blue;
+    height: 79vh;
+}
+
+.body_message_content tab.activeThree {
+    display: block;
+}
+
+li.activeThree {
+    display: block;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.body_message {
+    height: 82vh;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 1%;
+}
+
+.message_header {
+    width: 21%;
+    float: left;
+    display: inline-block;
+}
+
+.body_message_content {
+    height: 82vh;
+    background: white;
+    display: inline-block;
+    float: left;
+    width: 77%;
+}
+
+.tile_header {
+    width: 100%;
+    overflow: hidden;
+}
+
+.chat_title {
+    display: inline-block;
+    float: left;
+    width: 30%;
+}
+
+.icon-test {
+    display: inline-block;
+    float: left;
+    width: 70%;
+    margin-top: 3%;
+}
+
+.icon-test a {
+    cursor: pointer;
+    padding-top: 2%;
+    float: right;
+    margin-right: 6%;
+    width: 30px;
+    height: 30px;
+    background: #f5f5f5;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.search_message {
+    padding: 1%;
+    border-radius: 14px;
+    display: inline-block;
+    width: 100%;
+    background: #f5f5f5;
+    box-sizing: border-box;
+}
+
+i.fas.fa-search {
+    font-size: 20px;
+    margin-top: 2%;
+    display: inline-block;
+    float: left;
+}
+
+.search_message input[type="text"] {
+    padding: 2% 2%;
+    border: none;
+    background: #f5f5f5;
+}
+
+.iconUser {
+    display: inline-block;
+    float: left;
+    width: 12%;
+}
+
+ul.body_message__header {
+    padding: 0%;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    list-style: none;
+    margin: 1% 0%;
+}
+
+ul.body_message_header li {
+    display: block;
+    overflow: hidden;
+}
+
+.iconUser img {
+    width: 100%;
+    height: 56px;
+    border-radius: 50%;
+}
+
+ul.body_message_header li p {
+    width: 60%;
+    display: inline-block;
+    margin: 0%;
+}
+
+ul.body_message_header li p {
+    display: inline-block;
+    float: left;
+    width: 20%;
+}
+
+ul.body_message__header li p {
+    padding-left: 2%;
+    display: inline-block;
+    width: 56%;
+}
+
+ul.body_message__header li {
+    padding: 1%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.body_message_content tab {
+    display: none;
+    width: 100%;
+    background: white;
+    height: 79vh;
+}
+
+.body_message_content tab.activeThree {
+    display: block;
+}
+
+li.activeThree {
+    display: block;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.information_user_status {
+    width: 70%;
+    display: inline-block;
+    height: 8vh;
+    background: white;
+    padding: 1%;
+    float: left;
+}
+
+.information_user_status .iconUser {
+    display: inline-block;
+    float: left;
+    width: 6%;
+}
+
+.information_user_status p {
+    margin: 0;
+    padding-left: 9%;
+}
+
+.information_user_status p:nth-child(3) {
+    color: green;
+}
+
+.tab_header {
+    border: 3px solid #F5F5F5;
+    height: 11vh;
+    width: 100%;
+}
+
+.feature {
+    padding: 2% 3%;
+    width: 21%;
+    display: inline-block;
+    float: left;
+}
+
+.feature a {
+    float: left;
+    padding-right: 7%;
+    font-size: 27px;
+    color: cornflowerblue;
+}
+
+.tab_content {
+    width: 100%;
+    height: 73vh;
+}
+
+.tab_content .left {
+    height: 73vh;
+    width: 70%;
+    float: left;
+    display: inline-block;
+    border: 1px solid #f5f5f5;
+}
+
+.right {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    height: 73vh;
+}
+
+.inbox_content {
+    height: 65vh;
+}
+
+.feature_inbox_content {
+    border: 1px solid #f5f5f5;
+    width: 100%;
+    display: flex;
+    height: 27vh;
+}
+
+form {
+    overflow: hidden;
+    margin-left: 0%;
+    box-sizing: border-box;
+    width: 85%;
+    display: inline-block;
+    float: right;
+}
+
+form button {
+    margin-top: 2%;
+    float: left;
+    width: 14%;
+    height: 4vh;
+    margin-left: 0%;
+    margin-left: 2%;
+}
+
+.comment {
+    margin-bottom: 0%;
+    margin-top: 1%;
+    display: inline-block;
+    padding: 1% 4%;
+    border-radius: 18px;
+    background: #f5f5f5;
+    width: 72%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.comment input[type="text"] {
+    display: inline-block;
+    float: left;
+    width: 84%;
+    border: none;
+    background: #f5f5f5;
+}
+
+i.fas.fa-smile-beam {
+    font-size: 25px;
+    color: cornflowerblue;
+    margin-left: 2%;
+}
+
+.icon-feature {
+    padding-left: 7%;
+    width: 21%;
+    box-sizing: border-box;
+}
+
+.icon-feature a {
+    color: darkblue;
+    padding-right: 11%;
+    padding-left: 0%;
+    display: inline-block;
+    margin-top: 8%;
+    font-size: 24px;
+}

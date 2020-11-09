@@ -33,9 +33,9 @@ app.get("/message", function(req, res) {
 app.get("/signin", function(req, res) {
     res.render("web/signin");
 });
-app.get("/login", function(req, res) {
-    res.render("web/login");
+app.get("/home", function(req, res) {
+    res.render("web/index");
 });
 app.get("/", function(req, res) {
-    res.render("web/index");
+    res.render("web/login");
 });
