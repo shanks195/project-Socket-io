@@ -10,7 +10,10 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/signin.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io("http://localhost:3000");
+    </script>
     <!-- goi dien len server -->
 
 </head>
@@ -64,12 +67,12 @@
                     <div class="field">
                         <div class="label">
                             First Name</div>
-                        <input type="text">
+                        <input type="text" id="textFirstName">
                     </div>
                     <div class="field">
                         <div class="label">
                             Last Name</div>
-                        <input type="text">
+                        <input type="text" id="textLastName">
                     </div>
                     <div class="field">
                         <button class="firstNext next">Next</button>
@@ -81,12 +84,12 @@
                     <div class="field">
                         <div class="label">
                             Email Address</div>
-                        <input type="text">
+                        <input type="text" id="txtEmail">
                     </div>
                     <div class="field">
                         <div class="label">
                             Phone Number</div>
-                        <input type="Number">
+                        <input type="Number" id="textNumber">
                     </div>
                     <div class="field btns">
                         <button class="prev-1 prev">Previous</button>
@@ -99,16 +102,16 @@
                     <div class="field">
                         <div class="label">
                             Date</div>
-                        <input type="text">
+                        <input type="text" id="txt_date">
                     </div>
                     <div class="field">
                         <div class="label">
                             Gender</div>
                         <select>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-              </select>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
                     </div>
                     <div class="field btns">
                         <button class="prev-2 prev">Previous</button>
@@ -121,16 +124,16 @@
                     <div class="field">
                         <div class="label">
                             Username</div>
-                        <input type="text">
+                        <input type="text" id="txtUserName">
                     </div>
                     <div class="field">
                         <div class="label">
                             Password</div>
-                        <input type="password">
+                        <input type="password" id="txtPassword">
                     </div>
                     <div class="field btns">
                         <button class="prev-3 prev">Previous</button>
-                        <button class="submit">Submit</button>
+                        <button class="submit" id="btnRegister">Submit</button>
                     </div>
                 </div>
             </form>
