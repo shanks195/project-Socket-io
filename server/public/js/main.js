@@ -1,6 +1,34 @@
 /*------------index.html------------------------------------------------------------------*/
 //Tab home forum stock market
+// tab title
+let tabs_Home = document.getElementById('Home');
 
+tabs_Home.addEventListener("click", function() {
+    document.title = "Home | open4um";
+});
+
+let tabs_Message = document.getElementById('Message');
+
+tabs_Message.addEventListener("click", function() {
+    document.title = "Message | open4um";
+
+});
+
+let tabs_Application = document.getElementById('Application');
+
+tabs_Application.addEventListener("click", function() {
+    document.title = "Application | open4um";
+
+
+});
+let tabs_Market = document.getElementById('Market');
+
+tabs_Market.addEventListener("click", function() {
+    document.title = "Market | open4um";
+
+});
+console.log(tabs_Market);
+// End Tab title
 let tabs_header = document.getElementsByClassName("tabs_header")[0];
 let tab_content = document.getElementsByClassName("tab-content")[0];
 

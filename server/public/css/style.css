@@ -5,6 +5,23 @@
     margin: 0;
 }
 
+.account.il {
+    background: #f5f5f5;
+    width: 62px;
+    border-radius: 9px;
+}
+
+.account.il:hover {
+    background: cornflowerblue;
+    color: white;
+}
+
+.il:hover {
+    color: white;
+    background: cornflowerblue;
+    cursor: pointer;
+}
+
 header {
     width: 100%;
     overflow: hidden;
@@ -118,7 +135,7 @@ a#button_close {
     margin-bottom: 2%;
     border-radius: 16px;
     background: #f0f2f5;
-    padding: 2%;
+    padding: 1%;
 }
 
 .il {
@@ -139,7 +156,6 @@ a#button_close {
 
 header {
     position: relative;
-    border-bottom: 1px solid #eceef1;
 }
 
 header .col-2 li {
@@ -151,11 +167,14 @@ header .col-2 li {
 }
 
 .search-web input[type="text"] {
+    width: 73%;
     display: inline-block;
     float: left;
+    padding-top: 3%;
 }
 
 .search-web i.fas.fa-search {
+    width: 12%;
     display: inline-block;
     float: left;
 }
@@ -676,6 +695,10 @@ div#nav {
 .input-tinnhan form {
     display: inline-block;
     width: 100%;
+}
+
+.icon_chuc {
+    margin-top: 2%;
 }
 
 .input-tinnhan input[type="text"] {

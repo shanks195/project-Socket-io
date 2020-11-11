@@ -1,3 +1,5 @@
+/*------------------------------------ message -------------------*/
+
 .body_message {
     height: 82vh;
     width: 100%;
@@ -88,7 +90,7 @@ ul.body_message__header {
     margin: 1% 0%;
 }
 
-ul.body_message_header li {
+ul.body_message_header li1 {
     display: block;
     overflow: hidden;
 }
@@ -99,42 +101,42 @@ ul.body_message_header li {
     border-radius: 50%;
 }
 
-ul.body_message_header li p {
+ul.body_message_header li1 p {
     width: 60%;
     display: inline-block;
     margin: 0%;
 }
 
-ul.body_message_header li p {
+ul.body_message_header li1 p {
     display: inline-block;
     float: left;
     width: 20%;
 }
 
-ul.body_message__header li p {
+ul.body_message__header li1 p {
     padding-left: 2%;
     display: inline-block;
     width: 56%;
 }
 
-ul.body_message__header li {
+ul.body_message__header li1 {
     padding: 1%;
     width: 100%;
     overflow: hidden;
 }
 
-.body_message_content tab {
+.body_message_content tab1 {
     display: none;
     width: 100%;
     background: blue;
     height: 79vh;
 }
 
-.body_message_content tab.activeThree {
+.body_message_content tab1.activeThree {
     display: block;
 }
 
-li.activeThree {
+li1.activeThree {
     display: block;
     background: #f5f5f5;
     border-radius: 15px;
@@ -218,19 +220,19 @@ i.fas.fa-search {
 .iconUser {
     display: inline-block;
     float: left;
-    width: 12%;
+    width: 17%;
 }
 
 ul.body_message__header {
     padding: 0%;
     display: block;
     width: 100%;
-    overflow: hidden;
+    overflow: scroll;
     list-style: none;
     margin: 1% 0%;
 }
 
-ul.body_message_header li {
+ul.body_message_header li1 {
     display: block;
     overflow: hidden;
 }
@@ -241,42 +243,43 @@ ul.body_message_header li {
     border-radius: 50%;
 }
 
-ul.body_message_header li p {
+ul.body_message_header li1 p {
     width: 60%;
     display: inline-block;
     margin: 0%;
 }
 
-ul.body_message_header li p {
+ul.body_message_header li1 p {
     display: inline-block;
     float: left;
     width: 20%;
 }
 
-ul.body_message__header li p {
+ul.body_message__header li1 p {
     padding-left: 2%;
     display: inline-block;
     width: 56%;
 }
 
-ul.body_message__header li {
+ul.body_message__header li1 {
+    display: block;
     padding: 1%;
     width: 100%;
     overflow: hidden;
 }
 
-.body_message_content tab {
+.body_message_content tab1 {
     display: none;
     width: 100%;
     background: white;
     height: 79vh;
 }
 
-.body_message_content tab.activeThree {
+.body_message_content tab1.activeThree {
     display: block;
 }
 
-li.activeThree {
+li1.activeThree {
     display: block;
     background: #f5f5f5;
     border-radius: 15px;
@@ -294,7 +297,7 @@ li.activeThree {
 .information_user_status .iconUser {
     display: inline-block;
     float: left;
-    width: 6%;
+    width: 7%;
 }
 
 .information_user_status p {
@@ -322,7 +325,7 @@ li.activeThree {
 .feature a {
     float: left;
     padding-right: 7%;
-    font-size: 27px;
+    font-size: 21px;
     color: cornflowerblue;
 }
 
@@ -336,7 +339,6 @@ li.activeThree {
     width: 70%;
     float: left;
     display: inline-block;
-    border: 1px solid #f5f5f5;
 }
 
 .right {
@@ -347,7 +349,9 @@ li.activeThree {
 }
 
 .inbox_content {
-    height: 65vh;
+    overflow: scroll;
+    border: 1px solid #f5f5f5;
+    height: 60vh;
 }
 
 .feature_inbox_content {
@@ -415,3 +419,10 @@ i.fas.fa-smile-beam {
     margin-top: 8%;
     font-size: 24px;
 }
+
+.title-message h1 {
+    font-size: 23px;
+}
+
+
+/* -------------------End Message------------------------------ */
