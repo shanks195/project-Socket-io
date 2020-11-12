@@ -1,24 +1,38 @@
-//pagagke express
-
-var express = require("express");
-const { response } = require("express");
-var app = express();
-const { isPrimitive } = require("util");
-app.use(express.static("./public"));
-app.set("view engine", "ejs");
-app.set("views", "./views");
-
 //pakage body-parser
 var bodyParser = require('body-parser');
+
+//goi database
+var low = require("lowdb");
+var FileSync = require("lowdb/adapters/FileSync");
+var adapter = new FileSync("db.json");
+
+db = low(adapter);
+db.defaults({ users: [] }).write();
+module.export = db;
+
 var server = require("http").Server(app);
 //pagagke IO
 var io = require("socket.io")(server);
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }))
+
+//goi home.route tu routes
+var homeRoute = require("./routes/home.route");
+
+//goi aplication.route tu routes
+var applicationRoute = require("./routes/application.route");
+
+//pagagke express
+
+//goi express
+var express = require("express");
+
+const { response } = require("express");
+
+var app = express();
+const { isPrimitive } = require("util");
 
 //lang nghe port 3000:
-server.listen(3000);
+var port = 3000;
 //socket.io lang nghe được người kết nối vào
 io.on("connection", function(socket) {
     console.log("Co người kết nối: " + socket.id);
@@ -33,12 +47,30 @@ io.on("connection", function(socket) {
         socket.broadcast.emit("Server-send-data", data + "888");
     });
 });
-//game
-app.get("/application/game_pokedex", function(req, res) {
-    res.render("web/application/pokedex/index");
-});
-// tab
-
+//use public
+app.use(express.static("./public"));
+//set file ejs  voi file views
+app.set("view engine", "ejs");
+app.set("views", "./views");
+//use body parser 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.listen(port, function() {
+        console.log('server listening on port' + port);
+    })
+    // tab application
+app.use('/application', applicationRoute);
+// tab home
+app.use('/home', homeRoute);
+//tab index
 app.get("/", function(req, res) {
     res.render("web/login");
 });
+app.get("/signin", function(req, res) {
+    res.render("web/signin");
+});
+app.post("/signin", function(req, res) {
+
+    db.get('users').push(req.body).write();
+    res.redirect('/');
+})

@@ -1,3 +1,13 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstName": "Nguyễn Tô",
+      "lastName": "Toàn",
+      "email": "totoan111295@gmail.com",
+      "phone": "0902438743",
+      "date": "11/12/1995",
+      "username": "toan1995",
+      "password": "T@an1995"
+    }
+  ]
 }
