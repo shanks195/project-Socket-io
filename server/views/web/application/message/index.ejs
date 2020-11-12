@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>Application Chat | Open4um</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <!-- goi dien len server -->
+    <script>
+        var socket = io("http://localhost:3000");
+        socket.on("Server-send-data", function(data) {
+            $("#noidung").append(data + ", ");
+        })
+        $(document).ready(function() {
+            $('#submit').click(function() {
+                socket.emit("Client-send-data", "Hello");
+            });
+        })
+    </script>
+    
+    <link rel="stylesheet" href="css/message.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="application">
+           <div class="title-message">
+               <h1>#Application Chat</h1>
+           </div>
+           <div class="body_message">
+            <div class="message_header">
+                <div class="chat_title">
+                    <h2>Chat</h2>
+                </div>
+                <div class="search_message">
+                    <i class="fas fa-search"></i>
+                    <input type="text">
+                </div>
+                <ul class="body_message__header">
+                    <li class="activeThree"></li>
+                    <li ></li>
+                    <li ></li>
+                    <li ></li>
+                    <li ></li>
+                    <li ></li>
+                    <li ></li>
+                    <li ></li>
+                    <li ></li>
+                    <li ></li>
+                    <li ></li>
+
+                </ul>
+            </div>
+            <div class="body_message_content">
+                <tab class="activeThree"></tab>
+                <tab ></tab>
+                <tab ></tab>
+                <tab ></tab>
+                <tab ></tab>
+                <tab ></tab>
+                <tab ></tab>
+                <tab ></tab>
+                <tab ></tab>
+                <tab ></tab>
+
+            </div>
+           </div>
+            
+            
+
+
+        </div>
+    </div>
+    <script src="js/message.js"></script>
+</body>
+
+</html>
