@@ -27,7 +27,7 @@ tabs_Market.addEventListener("click", function() {
     document.title = "Market | open4um";
 
 });
-console.log(tabs_Market);
+
 // End Tab title
 let tabs_header = document.getElementsByClassName("tabs_header")[0];
 let tab_content = document.getElementsByClassName("tab-content")[0];
@@ -77,28 +77,7 @@ for (let i = 0; i < tabs_Pane.length; i++) {
 
 
 
-/*----- Application message----------------------------*/
 
-
-let tabHeader = document.getElementsByClassName("tab-header")[0];
-let tabBody = document.getElementsByClassName("tab-body")[0];
-
-let tabsPane = tabHeader.getElementsByTagName("a");
-
-function closeWindow() {
-    tabBody.style.display = "none";
-}
-
-for (let i = 0; i < tabsPane.length; i++) {
-    tabsPane[i].addEventListener("click", function() {
-        tabHeader.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
-        tabsPane[i].classList.add("activeTwo");
-        tabBody.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
-        tabBody.getElementsByTagName("tab")[i].classList.add("activeTwo");
-
-
-    });
-}
 
 
 

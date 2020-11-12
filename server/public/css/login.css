@@ -14,7 +14,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+.center {
     height: 100vh;
     width: 100%;
     background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
@@ -31,7 +31,7 @@ body {
 }
 
 .show-btn,
-.container {
+.center .container {
     position: absolute;
     top: 50%;
     left: 50%;

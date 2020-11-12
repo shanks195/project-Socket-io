@@ -9,28 +9,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="imgs/logo_web.png" />
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/indexSki.js"></script>
     <!-- goi dien len server -->
-    <script>
-        var socket = io("http://localhost:3000");
-        socket.on("Server-send-data", function(data) {
-            $("#noidung").append(data + ", ");
-        })
-        $(document).ready(function() {
-            $('#submit').click(function() {
-                socket.emit("Client-send-data", "Hello");
-            });
-        })
-    </script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/login.css">
+
     <!-- End css -->
 </head>
 
 <body>
-    <div class="container">
+    <!-- Login -->
+    <div id="loginForm" class="center">
+        <input type="checkbox" id="show">
+        <label for="show" class="show-btn">View Form</label>
+        <div class="container">
+            <label for="show" class="close-btn fas fa-times" title="close"></label>
+            <div class="text">
+                Login Form</div>
+            <form action="#">
+                <div class="data">
+                    <label>Email or Phone</label>
+                    <input type="text" required>
+                </div>
+                <div class="data">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+                <div class="forgot-pass">
+                    <a href="#">Forgot Password?</a></div>
+                <div class="btn">
+                    <div class="inner">
+                    </div>
+                    <button type="submit">login</button>
+                </div>
+                <div class="signup-link">
+                    Not a member? <a href="/signin">Signup now</a></div>
+            </form>
+        </div>
+    </div>
+    <!-- end Login -->
+    <!-- Home -->
+    <div class="container1" id="Home_Content">
         <div id="application">
             <header>
                 <div class="col-1">
@@ -179,7 +203,7 @@
                 <!-- Het Trang HOME -->
                 <!-- Trang forum -->
                 <tab id="forum " data-tab-content>
-                    <div class="container">
+                    <div class="container1 message">
                         <div id="application">
                             <div class="title-message">
                                 <h1>#Application Chat</h1>
@@ -550,6 +574,7 @@
 
         </div>
     </div>
+    <!-- End Home -->
     <script src="js/main.js "></script>
     <script src="js/message.js"></script>
 </body>

@@ -1,7 +1,4 @@
-$(document).ready(function() {
-        alert(1);
-    })
-    //Sign in form
+//Sign in form
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
