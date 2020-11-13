@@ -1,45 +1,38 @@
-//pakage body-parser
-var bodyParser = require('body-parser');
+//goi express
+var express = require("express");
+const { isPrimitive } = require("util");
+var app = express();
 
 //goi database
 var low = require("lowdb");
 var FileSync = require("lowdb/adapters/FileSync");
 var adapter = new FileSync("db.json");
 var io = require('socket.io').listen(server);
-db = low(adapter);
-db.defaults({ users: [] }).write();
-module.export = db;
-
-
-
-
-
 
 
 //goi aplication.route tu routes
 var applicationRoute = require("./routes/application.route");
-
-
-//goi express
-var express = require("express");
-const { response } = require("express");
-var app = express();
-const { isPrimitive } = require("util");
-
-//socket.io lang nghe được người kết nối vào
-//pagagke IO
-
-
-//lang nghe port 3000:
+//thưc hien database
+db = low(adapter);
+db.defaults({ users: [] }).write();
+module.export = db;
+//thuc hien express
+app.use(express.static("./public"));
+app.set("view engine", "ejs");
+app.set("views", "./views");
+//goi http port 
 var server = require("http").Server(app);
-var port = 3000;
-app.listen(port, function() {
-    console.log('server listening on port' + port);
-})
+//goi socket io
+var io = require("socket.io")(server);
+//pakage body-parser
+var bodyParser = require('body-parser');
 
+//port 3000
+server.listen(3000);
+//thuc hien socket io
 io.on("connection", function(socket) {
     console.log("Co người kết nối: " + socket.id);
-    //socket.io lang nghe duoc người ngắt két nối
+
     socket.on("disconnect", function() {
         console.log("Ngắt kết nối: " + socket.id);
     });
@@ -51,29 +44,21 @@ io.on("connection", function(socket) {
     });
 });
 
-//use public
-app.use(express.static("./public"));
-//set file ejs  voi file views
-app.set("view engine", "ejs");
-app.set("views", "./views");
 //use body parser 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// tab application
-app.use('/application', applicationRoute);
-
-//tab index
-app.get("/", function(req, res) {
-    res.render("web/index"), {
-        users: db.get('users').value(),
-    };
-});
+app.use("/application", applicationRoute);
 app.get("/signin", function(req, res) {
     res.render("web/signin");
 });
 app.post("/signin", function(req, res) {
-
+    console.log(req.body);
     db.get('users').push(req.body).write();
     res.redirect('/');
 })
+app.get("/login", function(req, res) {
+    res.render("web/login");
+});
+app.get("/", function(req, res) {
+    res.render("web/index");
+});

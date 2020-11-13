@@ -8,21 +8,28 @@
     <title>Home | Open4um</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="imgs/logo_web.png" />
-    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/indexSki.js"></script>
-    <!-- goi dien len server -->
 
-    <!-- CSS -->
+    <script src="socket.io/socket.io.js"></script>
+    <!-- goi dien len server -->
+    <script>
+        var socket = io("http://localhost:3000");
+        socket.on("Server-send-data", function(data) {
+            $("#noidung").append(data + ", ");
+        })
+        $(document).ready(function() {
+            $('#submit').click(function() {
+                socket.emit("Client-send-data", "Hello");
+            });
+        })
+    </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/message.css">
     <link rel="stylesheet" href="css/login.css">
-
-    <!-- End css -->
 </head>
 
 <body>
+
     <!-- Login -->
     <div id="loginForm" class="center">
         <input type="checkbox" id="show">
