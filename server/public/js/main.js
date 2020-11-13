@@ -1,27 +1,56 @@
 /*------------index.html------------------------------------------------------------------*/
 //Tab home forum stock market
-const tabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content]')
+// tab title
+let tabs_Home = document.getElementById('Home');
 
-tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            console.log(tab.dataset)
-            const target = document.querySelector(tab.dataset.tabTarget)
-            tabContents.forEach(tabContent => {
-                tabContent.classList.remove('active')
-            })
-            tabs.forEach(tab => {
-                tab.classList.remove('active')
-            })
-            tab.classList.add('active')
-            target.classList.add('active')
-        })
-    })
-    /*----------------SOURCE CODE-------------------------------------------------------------*/
-    //     //--Tab menu load các chủ đề lên dữ liệu riêng---//
-    // let tabHeader = document.getElementsByClassName("tab-header")[0];
-    // let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
-    // let tabBody = document.getElementsByClassName("tab-body")[0];
+tabs_Home.addEventListener("click", function() {
+    document.title = "Home | open4um";
+});
+
+let tabs_Message = document.getElementById('Message');
+
+tabs_Message.addEventListener("click", function() {
+    document.title = "Message | open4um";
+
+});
+
+let tabs_Application = document.getElementById('Application');
+
+tabs_Application.addEventListener("click", function() {
+    document.title = "Application | open4um";
+
+
+});
+let tabs_Market = document.getElementById('Market');
+
+tabs_Market.addEventListener("click", function() {
+    document.title = "Market | open4um";
+
+});
+
+// End Tab title
+let tabs_header = document.getElementsByClassName("tabs_header")[0];
+let tab_content = document.getElementsByClassName("tab-content")[0];
+
+let tabs_Pane = tabs_header.getElementsByTagName("li");
+
+
+
+for (let i = 0; i < tabs_Pane.length; i++) {
+    tabs_Pane[i].addEventListener("click", function() {
+        tabs_header.getElementsByClassName("active")[0].classList.remove("active");
+        tabs_Pane[i].classList.add("active");
+        tab_content.getElementsByClassName("active")[0].classList.remove("active");
+        tab_content.getElementsByTagName("tab")[i].classList.add("active");
+
+
+    });
+}
+/*----------------SOURCE CODE-------------------------------------------------------------*/
+//     //--Tab menu load các chủ đề lên dữ liệu riêng---//
+// let tabHeader = document.getElementsByClassName("tab-header")[0];
+// let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
+// let tabBody = document.getElementsByClassName("tab-body")[0];
 
 // let tabsPane = tabHeader.getElementsByTagName("li");
 
@@ -48,29 +77,9 @@ tabs.forEach(tab => {
 
 
 
-/*----- Application message----------------------------*/
 
 
-   let tabHeader = document.getElementsByClassName("tab-header")[0];
-    let tabBody = document.getElementsByClassName("tab-body")[0];
-    
-let tabsPane = tabHeader.getElementsByTagName("a");
-function closeWindow(){
-    tabBody.style.display="none";
-}
 
-for (let i = 0; i < tabsPane.length; i++) {
-    tabsPane[i].addEventListener("click", function() {
-        tabHeader.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
-        tabsPane[i].classList.add("activeTwo");
-        tabBody.getElementsByClassName("activeTwo")[0].classList.remove("activeTwo");
-        tabBody.getElementsByTagName("tab")[i].classList.add("activeTwo");
-       
-
-    });
-}
-
-  
 
 
 
