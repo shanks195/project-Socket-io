@@ -68,6 +68,7 @@ header {
     display: inline-block;
     border-radius: 35px;
 }
+
 a#button_close {
     cursor: pointer;
 }
@@ -514,8 +515,7 @@ div#nav .parent-menu-parent {
     border-bottom: none;
 }
 
-.tab-body tab {
-}
+.tab-body tab {}
 
 .tab-body tab.activeTwo {
     display: block;
@@ -724,19 +724,17 @@ header {
 }
 
 .tab-content {
-    margin-top: 96px;
+    margin-top: 111px;
     position: fixed;
     z-index: 2000;
 }
 
 .box-message-user {
-   
-display: block;
-   
-z-index: 2000;
-   
-position: absolute;
+    display: block;
+    z-index: 2000;
+    position: absolute;
 }
+
 .trangthai-user span {
     padding-top: 8%;
 }
@@ -746,6 +744,7 @@ position: absolute;
     display: inline-block;
     padding-left: 2%;
 }
+
 a.account-user:hover {
     color: white;
     background: darkseagreen;
@@ -757,12 +756,14 @@ a.account-user:hover {
     float: left;
     width: 100%;
 }
+
 .contentInbox::-webkit-scrollbar-thumb {
     background: #222;
     border-radius: 16px;
 }
-.tab-body {
-}
+
+.tab-body {}
+
 .tab-body>tab {
     display: none;
 }
