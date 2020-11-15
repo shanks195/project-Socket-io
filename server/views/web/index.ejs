@@ -14,13 +14,14 @@
     <!-- goi dien len server -->
     <script>
         var socket = io("http://localhost:3000");
-        socket.on("Server-send-data", function(data) {
-            $("#noidung").append(data + ", ");
+        socket.on("server-send-sigin-completeted",function(){
+            $("#currentUser").html(data);
+            $("#loginForm").hide(2000);
+            $("#Home_Content").show(1000);
         })
-        $(document).ready(function() {
-            $('#submit').click(function() {
-                socket.emit("Client-send-data", "Hello");
-            });
+        $(document).ready(function(){
+            $("#loginForm").show();
+            $("#Home_Content").hide();
         })
     </script>
     <link rel="stylesheet" href="css/style.css">
@@ -103,7 +104,7 @@
                         <div class="user--avatar ">
                             <img src="imgs/avatar.jpg " style="width:100%;height: 100%;border-radius: 50%;margin-top:9% " alt=" ">
                         </div>
-                        <p>Tô Toàn</p>
+                        <p id="currentUser">Tô Toàn</p>
                     </div>
                     <div class="icon_chuc">
                         <div class="create il ">
@@ -250,7 +251,12 @@
                                             <div class="iconUser">
                                                 <img src="imgs/84656250_2797054377077886_7649723962657603584_o.jpg" alt="">
                                             </div>
-                                            <p>User 3</p>
+                                            <p>user 3</p>
+                                        </li1>
+                                        <li1>
+                                            <div class="iconUser team">
+                                                <i class="fas fa-wifi"></i>                                            </div>
+                                            <p>confide coder</p>
                                         </li1>
                                     </ul>
                                 </div>
@@ -375,6 +381,55 @@
                                             </div>
                                             <div class="right">
                                                 next
+                                            </div>
+                                        </div>
+
+                                    </tab1>
+                                    <tab1>
+                                        <div class="tab_header">
+                                            <div class="information_user_status">
+                                                <div class="iconUser team">
+                                                    <i class="fas fa-wifi"></i>
+                                                </div>
+                                                <p>Confie Coder</p>
+                                            </div>
+                                            <div class="feature">
+                                                <a href=""><i class="fas fa-phone-alt"></i></a>
+                                                <a href=""><i class="fas fa-video"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="tab_content">
+                                            <div class="left">
+                                                <div class="inbox_content">
+                                                    hello baby
+                                                </div>
+                                                <div class="feature_inbox_content">
+                                                    <div class="icon-feature">
+                                                        <a href=""><i class="fas fa-images"></i></a>
+                                                        <a href=""><i class="fas fa-gifts"></i></a>
+                                                    </div>
+                                                    <form action="">
+
+                                                        <div class="comment">
+                                                            <input type="text" placeholder="Import Message....">
+                                                            <i class="fas fa-smile-beam"></i>
+                                                        </div>
+                                                        <button>Sends</button>
+                                                    </form>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="right">
+                                             <div id="boxtitle">Users Online</div>
+                                             <div id="boxContent">
+                                                 <div class="useronline">user 1</div>
+                                                 <div class="useronline">user 2</div>
+                                                 <div class="useronline">user 3</div>
+                                                 <div class="useronline">user 4</div>
+                                                 <div class="useronline">user 5 </div>
+
+                                             </div>
                                             </div>
                                         </div>
 

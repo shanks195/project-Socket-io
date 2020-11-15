@@ -1,25 +1,85 @@
 {
   "users": [
     {
-      "username": "toan",
-      "password": "T@an1995"
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "date": "",
+      "username": "",
+      "password": ""
     },
     {
-      "username": "toan",
-      "password": "T@an1995"
-    },
-    {
-      "username": "toan",
-      "password": "T@an1995"
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "date": "",
+      "username": "",
+      "password": ""
     },
     {
       "firstName": "Nguyễn Tô",
-      "lastName": "Toàn",
-      "email": "totoan111295@gmail.com",
+      "lastName": "Nguyen ",
+      "email": "0706849718",
+      "phone": "0902438743",
+      "date": "11/12/1996",
+      "username": "hueman1996",
+      "password": "T@an1995"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "date": "",
+      "username": "erescfxcv123",
+      "password": "123456"
+    },
+    {
+      "firstName": "Nguyễn Tô",
+      "lastName": "Minh",
+      "email": "robocon87@gmail.com",
       "phone": "0902438743",
       "date": "11/12/1995",
-      "username": "toan1995",
-      "password": "T@an1995"
+      "username": "chigogo",
+      "password": ""
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "date": "",
+      "username": "",
+      "password": ""
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "date": "",
+      "username": "",
+      "password": ""
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "date": "",
+      "username": "",
+      "password": ""
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "date": "",
+      "username": "",
+      "password": ""
     }
   ]
 }

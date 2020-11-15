@@ -219,13 +219,11 @@ header .col-2 li {
 }
 
 span.coin {
-    line-height: 50%;
     text-align: center;
-    margin-left: 3%;
     border-radius: 50%;
     background: #f3b612;
-    width: 28px;
-    height: 14px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     font-size: 19px;
     color: white;

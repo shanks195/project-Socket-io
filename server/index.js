@@ -15,6 +15,7 @@ var applicationRoute = require("./routes/application.route");
 //thưc hien database
 db = low(adapter);
 db.defaults({ users: [] }).write();
+
 module.export = db;
 //thuc hien express
 app.use(express.static("./public"));
@@ -26,39 +27,41 @@ var server = require("http").Server(app);
 var io = require("socket.io")(server);
 //pakage body-parser
 var bodyParser = require('body-parser');
-
+var mangUser =['thetoan1995'];
 //port 3000
 server.listen(3000);
 //thuc hien socket io
 io.on("connection", function(socket) {
     console.log("Co người kết nối: " + socket.id);
-
+    // var database=db.get('users').value();
+    socket.on("client-send-User-name",function(data){
+        console.log(data);
+        if(mangUser.indexOf(data)>=0){
+            //sign in fail
+            socket.emit("server-send-signin-failed");
+        }else{
+            //sigin completted
+            mangUser.push(data);
+            socket.emit("server-send-sigin-completeted",data);
+        }
+       });
     socket.on("disconnect", function() {
         console.log("Ngắt kết nối: " + socket.id);
     });
-    socket.on("Client-send-data", function(data) {
-        console.log(socket.id + " Vừa gửi   " + data);
-        //io.sockets.emit("Server-send-data", data + "888");
-        //socket.emit("Server-send-data", data + "888");
-        socket.broadcast.emit("Server-send-data", data + "888");
-    });
+  
 });
 
 //use body parser 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/application", applicationRoute);
-app.get("/signin", function(req, res) {
+app.get("/", function(req, res) {
     res.render("web/signin");
 });
-app.post("/signin", function(req, res) {
+app.post("/", function(req, res) {
     console.log(req.body);
     db.get('users').push(req.body).write();
-    res.redirect('/');
+    res.render("web/signin");
+    
 })
-app.get("/login", function(req, res) {
-    res.render("web/login");
-});
-app.get("/", function(req, res) {
-    res.render("web/index");
-});
+

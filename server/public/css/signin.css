@@ -4,8 +4,7 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
-
-body {
+.body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +18,7 @@ body {
     background: #d43f8d;
 }
 
-.container {
+.body .container1 {
     width: 330px;
     background: #fff;
     text-align: center;
@@ -27,34 +26,34 @@ body {
     padding: 50px 35px 10px 35px;
 }
 
-.container header {
+.body .container1 header1.header {
     font-size: 35px;
     font-weight: 600;
     margin: 0 0 30px 0;
 }
 
-.container .form-outer {
+.body .container1 .form-outer {
     width: 100%;
     overflow: hidden;
 }
 
-.container .form-outer form {
+.body .container1 .form-outer form.form1 {
     display: flex;
     width: 400%;
 }
 
-.form-outer form .page {
+.body .form-outer form.form1 .page {
     width: 25%;
     transition: margin-left 0.3s ease-in-out;
 }
 
-.form-outer form .page .title {
+.body .form-outer form.form1 .page .title {
     text-align: left;
     font-size: 25px;
     font-weight: 500;
 }
 
-.form-outer form .page .field {
+.body .form-outer form.form1 .page .field {
     width: 330px;
     height: 45px;
     margin: 45px 0;
@@ -62,13 +61,13 @@ body {
     position: relative;
 }
 
-form .page .field .label {
+.body form.form1 .page .field .label {
     position: absolute;
     top: -30px;
     font-weight: 500;
 }
 
-form .page .field input {
+.body form.form1 .page .field input {
     height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
@@ -77,14 +76,14 @@ form .page .field input {
     font-size: 18px;
 }
 
-form .page .field select {
+.body form.form1 .page .field select {
     width: 100%;
     padding-left: 10px;
     font-size: 17px;
     font-weight: 500;
 }
 
-form .page .field button {
+.body form.form1 .page .field button {
     width: 100%;
     height: calc(100% + 5px);
     border: none;
@@ -100,43 +99,43 @@ form .page .field button {
     transition: 0.5s ease;
 }
 
-form .page .field button:hover {
+.body form.form1 .page .field button:hover {
     background: #000;
 }
 
-form .page .btns button {
+.body form.form1 .page .btns button {
     margin-top: -20px!important;
 }
 
-form .page .btns button.prev {
+.body form.form1 .page .btns button.prev {
     margin-right: 3px;
     font-size: 17px;
 }
 
-form .page .btns button.next {
+.body form.form1 .page .btns button.next {
     margin-left: 3px;
 }
 
-.container .progress-bar {
+.body .container1 .progress-bar {
     display: flex;
     margin: 40px 0;
     user-select: none;
 }
 
-.container .progress-bar .step {
+.body .container1 .progress-bar .step {
     text-align: center;
     width: 100%;
     position: relative;
 }
 
-.container .progress-bar .step p {
+.body .container1 .progress-bar .step p {
     font-weight: 500;
     font-size: 18px;
     color: #000;
     margin-bottom: 8px;
 }
 
-.progress-bar .step .bullet {
+.body .progress-bar .step .bullet {
     height: 25px;
     width: 25px;
     border: 2px solid #000;
@@ -149,23 +148,23 @@ form .page .btns button.next {
     line-height: 25px;
 }
 
-.progress-bar .step .bullet.active {
+.body .progress-bar .step .bullet.active10 {
     border-color: #d43f8d;
     background: #d43f8d;
 }
 
-.progress-bar .step .bullet span {
+.body .progress-bar .step .bullet span {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.progress-bar .step .bullet.active span {
+.body .progress-bar .step .bullet.active10 span {
     display: none;
 }
 
-.progress-bar .step .bullet:before,
-.progress-bar .step .bullet:after {
+.body .progress-bar .step .bullet:before,
+.body .progress-bar .step .bullet:after {
     position: absolute;
     content: '';
     bottom: 11px;
@@ -175,7 +174,7 @@ form .page .btns button.next {
     background: #262626;
 }
 
-.progress-bar .step .bullet.active:after {
+.body .progress-bar .step .bullet.active10:after {
     background: #d43f8d;
     transform: scaleX(0);
     transform-origin: left;
@@ -188,17 +187,17 @@ form .page .btns button.next {
     }
 }
 
-.progress-bar .step:last-child .bullet:before,
-.progress-bar .step:last-child .bullet:after {
+.body .progress-bar .step:last-child .bullet:before,
+.body .progress-bar .step:last-child .bullet:after {
     display: none;
 }
 
-.progress-bar .step p.active {
+.body .progress-bar .step p.active10 {
     color: #d43f8d;
     transition: 0.2s linear;
 }
 
-.progress-bar .step .check {
+.body .progress-bar .step .check {
     position: absolute;
     left: 50%;
     top: 70%;
@@ -207,7 +206,7 @@ form .page .btns button.next {
     display: none;
 }
 
-.progress-bar .step .check.active {
+.body .progress-bar .step .check.active10 {
     display: block;
     color: #fff;
 }
