@@ -29,10 +29,21 @@ var bodyParser = require('body-parser');
 
 //port 3000
 server.listen(3000);
+var mangUsers = ["AAA"];
 //thuc hien socket io
 io.on("connection", function(socket) {
     console.log("Co người kết nối: " + socket.id);
-
+    socket.on("client-send-username", function (data) {
+        if (mangUsers.indexOf(data) >= 0) {
+             //failed
+            socket.emit("server-send-dki-thatbai");
+           
+        } else {
+            //successed
+            mangUsers.push(data);
+            socket.emit("server-send-dki-thanhcong", data);
+        }
+    });
     socket.on("disconnect", function() {
         console.log("Ngắt kết nối: " + socket.id);
     });

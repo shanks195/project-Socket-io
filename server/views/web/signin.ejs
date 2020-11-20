@@ -9,6 +9,18 @@
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="css/signin.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="socket.io/socket.io.js"></script>
+    <!-- goi dien len server -->
+    <script>
+        var socket = io("http://localhost:3000");
+
+        $(document).ready(function(){
+            $("#loginForm").show();
+            $("#Home_Content").hide();
+        });
+    </script>
 </head>
 
 <body>

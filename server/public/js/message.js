@@ -15,3 +15,24 @@ for (let i = 0; i < tabBody1.length; i++) {
 
     });
 }
+socket.on("server-send-dki-thatbai", function () {
+    alert("Sai username, co1 nguoi da dang ky roi!!");
+});
+socket.on("server-send-dki-thanhcong", function (data) {
+    alert("Co nguoi da dang ky thanh cong");
+    $("#currentUser").html(data);
+
+    $("#loginForm").hide(2000);
+    $("#Home_Content").show(1000);
+});
+
+
+$(document).ready(function () {
+    $("#loginForm").show();
+    $("#Home_Content").hide();
+    $("#btnLogin").click(function () {
+        socket.emit("client-send-username", $("#txtUserName").val());
+
+    });
+});
+
