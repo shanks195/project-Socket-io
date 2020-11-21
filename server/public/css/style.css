@@ -788,6 +788,23 @@ header {
     text-decoration: none;
     color: #aaaaaa;
 }
+.application.Chatroom {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 4% 0%;
+}
+
+.application a {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.application.Chatroom:hover {
+    background: #a5a5a5;
+}
 .account-user span {
     padding-top: 3%;
     display: inline-block;
