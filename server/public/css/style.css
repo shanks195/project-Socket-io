@@ -11,7 +11,7 @@
     border-radius: 9px;
 }
 
-.account.il:hover {
+.account.il a:hover {
     background: cornflowerblue;
     color: white;
 }
@@ -103,7 +103,7 @@ tab#game {}
 }
 
 .user--information {
-    width: 29%;
+    width: 38%;
     float: left;
     display: inline-block;
     border-radius: 35px;
@@ -784,7 +784,10 @@ header {
 .trangthai-user span {
     padding-top: 8%;
 }
-
+.account.il a {
+    text-decoration: none;
+    color: #aaaaaa;
+}
 .account-user span {
     padding-top: 3%;
     display: inline-block;

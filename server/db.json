@@ -1,3 +1,40 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstName": "Nguyễn Tô",
+      "lastName": "sdadd",
+      "email": "0706849718",
+      "phone": "0902438743",
+      "date": "11/12/1996",
+      "username": "toan1995",
+      "password": "2313123"
+    },
+    {
+      "firstName": "Nguyễn Tô",
+      "lastName": "Dan",
+      "email": "0706849718",
+      "phone": "0902438743",
+      "date": "11/12/1995",
+      "username": "toan1995",
+      "password": "T@an1995"
+    },
+    {
+      "firstName": "sd",
+      "lastName": "sdadd",
+      "email": "sada",
+      "phone": "0902438743",
+      "date": "11/12/1996",
+      "username": "toan1995",
+      "password": "sadsad"
+    },
+    {
+      "firstName": "sd",
+      "lastName": "sdadd",
+      "email": "sada",
+      "phone": "0902438743",
+      "date": "11/12/1996",
+      "username": "toan1995",
+      "password": "asdada"
+    }
+  ]
 }

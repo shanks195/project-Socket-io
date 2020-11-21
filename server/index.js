@@ -1,6 +1,6 @@
 //goi express
 var express = require("express");
-const { isPrimitive } = require("util");
+
 var app = express();
 
 //goi database
@@ -9,7 +9,16 @@ var FileSync = require("lowdb/adapters/FileSync");
 var adapter = new FileSync("db.json");
 var io = require('socket.io').listen(server);
 
-
+//ChatUser
+const formatMessage = require('./utils/messages');
+const {
+  userJoin,
+  getCurrentUser,
+  userLeave,
+  getRoomUsers
+} = require('./utils/users');
+//title chatCord
+const botName = 'ChatCord Bot';
 //goi aplication.route tu routes
 var applicationRoute = require("./routes/application.route");
 //thưc hien database
@@ -27,33 +36,62 @@ var io = require("socket.io")(server);
 //pakage body-parser
 var bodyParser = require('body-parser');
 
+
 //port 3000
 server.listen(3000);
-var mangUsers = ["AAA"];
+
 //thuc hien socket io
-io.on("connection", function(socket) {
-    console.log("Co người kết nối: " + socket.id);
-    socket.on("client-send-username", function (data) {
-        if (mangUsers.indexOf(data) >= 0) {
-             //failed
-            socket.emit("server-send-dki-thatbai");
-           
-        } else {
-            //successed
-            mangUsers.push(data);
-            socket.emit("server-send-dki-thanhcong", data);
-        }
+
+// Run when client connects
+io.on('connection', socket => {
+    socket.on('joinRoom', ({ username, room }) => {
+      const user = userJoin(socket.id, username, room);
+  
+      socket.join(user.room);
+  
+      // Welcome current user
+      socket.emit('message', formatMessage(botName, 'Welcome to ChatCord!'));
+  
+      // Broadcast when a user connects
+      socket.broadcast
+        .to(user.room)
+        .emit(
+          'message',
+          formatMessage(botName, `${user.username} has joined the chat`)
+        );
+  
+      // Send users and room info
+      io.to(user.room).emit('roomUsers', {
+        room: user.room,
+        users: getRoomUsers(user.room)
+      });
     });
-    socket.on("disconnect", function() {
-        console.log("Ngắt kết nối: " + socket.id);
+  
+    // Listen for chatMessage
+    socket.on('chatMessage', msg => {
+      const user = getCurrentUser(socket.id);
+  
+      io.to(user.room).emit('message', formatMessage(user.username, msg));
     });
-    socket.on("Client-send-data", function(data) {
-        console.log(socket.id + " Vừa gửi   " + data);
-        //io.sockets.emit("Server-send-data", data + "888");
-        //socket.emit("Server-send-data", data + "888");
-        socket.broadcast.emit("Server-send-data", data + "888");
+  
+    // Runs when client disconnects
+    socket.on('disconnect', () => {
+      const user = userLeave(socket.id);
+  
+      if (user) {
+        io.to(user.room).emit(
+          'message',
+          formatMessage(botName, `${user.username} has left the chat`)
+        );
+  
+        // Send users and room info
+        io.to(user.room).emit('roomUsers', {
+          room: user.room,
+          users: getRoomUsers(user.room)
+        });
+      }
     });
-});
+  });
 
 //use body parser 
 app.use(bodyParser.json());
@@ -65,11 +103,11 @@ app.get("/signin", function(req, res) {
 app.post("/signin", function(req, res) {
     console.log(req.body);
     db.get('users').push(req.body).write();
-    res.redirect('/');
+    res.redirect('/login');
 })
-app.get("/login", function(req, res) {
+app.get("/", function(req, res) {
     res.render("web/login");
 });
-app.get("/", function(req, res) {
+app.get("/home", function(req, res) {
     res.render("web/index");
 });
